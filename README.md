@@ -5,7 +5,7 @@ Home: https://pypi.org/project/poetry-core/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Core utilities for Poetry
 
@@ -117,4 +117,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@xylar](https://github.com/xylar/)
 
