@@ -1,4 +1,4 @@
-{% set version = "1.0.0a4" %}
+{% set version = "1.0.0a9" %}
 
 package:
   name: poetry-core
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/poetry-core/poetry-core-{{ version }}.tar.gz
-  sha256: a95aa0454b539ca6f98056aac5743de273762161aaf2db68152b8510de6849f1
+  sha256: f08e9829fd06609ca5615faa91739b589eb71e025a6aaf7ddffb698676eb7c8c
 
 build:
   number: 0
@@ -23,8 +23,8 @@ requirements:
 
 test:
   imports:
-    - poetry_core
-    - poetry_core._vendor
+    - poetry.core
+    - poetry.core._vendor
   commands:
     - pip check
   requires:
@@ -39,3 +39,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - xylar
