@@ -20,6 +20,8 @@ requirements:
     - intreehooks
   run:
     - python
+    # upstream claims this isn't needed for py38 but want to keep this noarch if possible
+    - importlib_metadata >=1.7.0>,<2.0.0
 
 test:
   imports:
