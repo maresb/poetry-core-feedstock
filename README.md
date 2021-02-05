@@ -5,11 +5,9 @@ Home: https://pypi.org/project/poetry-core/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/poetry-core-feedstock/blob/master/LICENSE.txt)
 
 Summary: Core utilities for Poetry
-
-
 
 Current build status
 ====================
