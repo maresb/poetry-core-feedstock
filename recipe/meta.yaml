@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: poetry-core
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/poetry-core/poetry-core-{{ version }}.tar.gz
-  sha256: 6a664ff389b9f45382536f8fa1611a0cb4d2de7c5a5c885db1f0c600cd11fbd5
+  sha256: a54bbb12c445b266eee0faf5d38f09dae9860cffa32ad7d99c7b345c94fb6f7b
 
 build:
   number: 0
@@ -15,11 +15,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
     - intreehooks
   run:
-    - python
+    - python >=3.5
     # upstream claims this isn't needed for py38 but want to keep this noarch if possible
     - importlib_metadata >=1.7.0,<2.0.0
 
