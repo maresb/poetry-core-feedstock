@@ -1,0 +1,22 @@
+See https://github.com/conda-forge/poetry-core-feedstock/issues/10
+
+diff --git a/poetry/core/masonry/builders/builder.py b/poetry/core/masonry/builders/builder.py
+index 0791c79..0783fa4 100644
+--- a/poetry/core/masonry/builders/builder.py
++++ b/poetry/core/masonry/builders/builder.py
+@@ -1,5 +1,6 @@
+ # -*- coding: utf-8 -*-
+ import logging
++import os
+ import re
+ import shutil
+ import sys
+@@ -102,7 +103,7 @@ class Builder(object):
+         if self._excluded_files is None:
+             # Checking VCS
+             vcs = get_vcs(self._path)
+-            if not vcs:
++            if not vcs or "CONDA_BUILD" in os.environ or os.environ.get("POETRY_NO_VCS_IGNORED_FILES", "0") == "1":
+                 vcs_ignored_files = set()
+             else:
+                 vcs_ignored_files = set(vcs.get_ignored_files())

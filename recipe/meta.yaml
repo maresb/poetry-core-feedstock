@@ -7,9 +7,11 @@ package:
 source:
   url: https://pypi.io/packages/source/p/poetry-core/poetry-core-{{ version }}.tar.gz
   sha256: 98c11c755a16ef6c5673c22ca94a3802a7df4746a0853a70b6fae8b9f5cac206
+  patches:
+    - vcs.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
