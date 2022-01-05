@@ -11,19 +11,17 @@ source:
     - vcs.patch
 
 build:
-  number: 1
-  noarch: python
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
     - intreehooks
   run:
-    - python >=3.5
-    # upstream claims this isn't needed for py38 but want to keep this noarch if possible
-    - importlib_metadata >=1.7.0,<2.0.0
+    - python
+    - importlib-metadata >=1.7.0,<2.0.0  # py<38
 
 test:
   imports:
