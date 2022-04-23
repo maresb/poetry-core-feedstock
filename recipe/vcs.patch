@@ -1,15 +1,16 @@
 See https://github.com/conda-forge/poetry-core-feedstock/issues/10
 
-diff -ruN poetry-core-1.1.0a6/poetry/core/masonry/builders/builder.py poetry-core-1.1.0a6-patch/poetry/core/masonry/builders/builder.py
---- poetry-core-1.1.0a6/poetry/core/masonry/builders/builder.py	2021-07-30 17:54:57.519796600 +0200
-+++ poetry-core-1.1.0a6-patch/poetry/core/masonry/builders/builder.py	2021-12-15 09:29:54.911189872 +0100
+diff --git a/src/poetry/core/masonry/builders/builder.py b/src/poetry/core/masonry/builders/builder.py
+index a4056a7..a165e77 100644
+--- a/src/poetry/core/masonry/builders/builder.py
++++ b/src/poetry/core/masonry/builders/builder.py
 @@ -1,4 +1,5 @@
  import logging
 +import os
  import re
- import shutil
  import sys
-@@ -110,7 +111,7 @@
+ import warnings
+@@ -105,7 +106,7 @@ class Builder:
  
              # Checking VCS
              vcs = get_vcs(self._path)
