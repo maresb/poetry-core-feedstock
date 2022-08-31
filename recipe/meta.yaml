@@ -12,19 +12,19 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.7
     - pip
     - intreehooks
   run:
-    - python
-    - importlib-metadata >=1.7.0,<2.0.0  # [py<38]
+    - python >=3.7
+    # upstream claims this isn't needed for py>=38 but want to keep this noarch
+    # if possible
+    - importlib-metadata >=1.7.0
 
 test:
   imports:
@@ -39,6 +39,7 @@ about:
   home: https://pypi.org/project/poetry-core/
   summary: Core utilities for Poetry
   license: MIT
+  license_family: MIT
   license_file: LICENSE
 
 extra:
