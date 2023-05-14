@@ -1,5 +1,5 @@
 {% set name = "poetry-core" %}
-{% set version = "1.5.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/poetry_core-{{ version }}.tar.gz
-  sha256: c6556c3b1ec5b8668e6ef5a4494726bc41d31907339425e194e78a6178436c14
+  sha256: a9c7296a12d6c8e4f8aa50a66ef3c967b2b50fba634da144d358e676fad9989f
   patches:
     - vcs.patch
 
@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://pypi.org/project/poetry-core/
-  summary: Core utilities for Poetry
+  summary: Poetry PEP 517 Build Backend
   license: MIT
   license_family: MIT
   license_file: LICENSE
